@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-success"
+      (click)="onlyOdd=!onlyOdd">Display Odd Numbers</button>
+      <!--on click the only odd variable is set to true when falses and viceversa-->
+      <div class="list-group">
+        <br><br>
+        <ul>
+          <div *ngIf="onlyOdd">
+        <li class="list-group-item"
+        *ngFor="let odd of oddNumber">
+          {{odd}}
+        </li>
+          </div>
+          <div class="list-group" *ngIf="!onlyOdd">
+        <li class="list-group-item"
+            *ngFor="let even of evenNumber">{{even}}
+        </li>
+          </div>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </div>
